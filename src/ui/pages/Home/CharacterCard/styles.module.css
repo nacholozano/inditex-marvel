@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container:hover .infoContainer {
+  background-color: var(--red);
+}
+
+.container.favorite svg {
+  color: var(--red);
+  transition: color 0.25s;
+}
+
+.container.favorite:hover svg {
+  color: var(--white);
+}
+
+.favoriteButton {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1px;
+}
+
+.favoriteButton:hover {
+  cursor: pointer;
+}
+
+.infoContainer {
+  border-top: 5px solid var(--red);
+  background-color: var(--black);
+  padding: 16px 16px 24px 16px;
+  display: flex;
+  justify-content: space-between;
+  transition: background-color 0.25s;
+  gap: 8px;
+}
+
+.title {
+  text-transform: uppercase;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 14px;
+}

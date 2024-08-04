@@ -1,0 +1,10 @@
+.favButton {
+  background: none;
+  border: none;
+  outline: none;
+  line-height: 1px;
+}
+
+.favButton:hover {
+  cursor: pointer;
+}

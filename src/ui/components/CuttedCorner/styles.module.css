@@ -1,0 +1,12 @@
+.container {
+  position: relative;
+}
+
+.container:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 13px solid var(--white);
+  border-left: 13px solid transparent;
+}
