@@ -44,8 +44,14 @@ Añadir un archivo `.env` en la raíz del proyecto con el campo `VITE_MARVEL_API
 
 `npm run test`
 
+Faltan test pero creo que con hacer unos cuantos es sufiente para este tipo de pruebas.
+
 ## Servir build de producción
 
 `npm run build`
 
 `npm run preview`
+
+## Otros
+
+La API va muy lenta y es posible que la petición falle y salga el error en consola.
