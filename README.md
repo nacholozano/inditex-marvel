@@ -9,7 +9,7 @@ Configurado con eslint, prettier, husky y commitlint.
 
 ## Comportamiento filtros
 
-En el listado normal el filtro se realiza contra la API apoyándose en una caché para cada búsqueda que se haga. Este filtro persiste después de navegar.  
+En el listado normal el filtro se realiza contra la API apoyándose en una caché para la petición inicial y la búsqueda actual. Este filtro persiste después de navegar.  
 En el listado de favoritos el filtro se realiza en local sobre el listado de personajes guardados. Este filtro no persiste después de navegar.
 
 ## Flujo de datos
@@ -25,10 +25,7 @@ En el listado de favoritos el filtro se realiza en local sobre el listado de per
 
 ## Navegación entre el listado inicial y los favoritos
 
-Se diferencia entre un listado y otro a través de un parámetro en la url:
-
-- Yo pondría la pantalla de favoritas en otra ruta pero la tarea solo pide dos
-- Es la misma vista y de esta forma se podría ir directamente a favoritos que es la función de las urls (aunque en este caso no funcione). También se podría guardar en el contexto de react qué modo está activo pero me he decantado por esta solución.
+Se diferencia entre un listado y otro a través de un parámetro en la url. También se podría guardar en el contexto de react qué modo está activo pero me he decantado por esta solución.
 
 ## Setup
 

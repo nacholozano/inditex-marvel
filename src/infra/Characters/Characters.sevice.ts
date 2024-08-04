@@ -9,7 +9,9 @@ import {
 
 class CharacterService {
   private httpClient: HttpClient
-  private cachedCharacters: { [key: string]: RawCharactersList } = {}
+  private cachedCharacters: {
+    [key: string]: RawCharactersList
+  } = {}
   private cachedCharacterComics: { [key: number]: RawComicsList } = {}
 
   constructor(httpClient: HttpClient) {
@@ -35,7 +37,14 @@ class CharacterService {
   }
 
   setCachedCharacters(term: string = '', data: RawCharactersList) {
-    this.cachedCharacters[term] = data
+    this.cachedCharacters = term
+      ? {
+          '': this.cachedCharacters[''],
+          [term]: data,
+        }
+      : {
+          '': data,
+        }
   }
 
   getCachedCharacterComics(id: number): RawComicsList | undefined {
