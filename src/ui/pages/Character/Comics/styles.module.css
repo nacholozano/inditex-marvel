@@ -1,0 +1,46 @@
+.comicsTitle {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 48px 0 24px;
+}
+
+.comicsContainer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 16px;
+}
+
+.item {
+  width: 180px;
+}
+
+.imgContainer {
+  padding-bottom: 12px;
+}
+
+.img {
+  width: 180px;
+  height: 268px;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 12px;
+}
+
+.desc {
+  font-weight: 400;
+  font-size: 12px;
+}
