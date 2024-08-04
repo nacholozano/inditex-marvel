@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'RobotoCondensed';
+  src: url('assets/RobotoCondensed-VariableFont_wght.ttf');
+}
+
+body {
+  margin: 0;
+  font-family: 'RobotoCondensed';
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000000;
+  --red: #ec1d24;
+  --white: #ffffff;
+}
