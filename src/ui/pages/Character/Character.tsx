@@ -1,8 +1,6 @@
 import { FC, useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import {
-  Character as ChacacterClass /* , Character */,
-} from 'domain/Character/Character'
+import { Character as ChacacterClass } from 'domain/Character/Character'
 import FavoritesContext from 'ui/contexts/favorites/favorites'
 import LoadingContext from 'ui/contexts/loading/loading'
 import FilterContext from 'ui/contexts/filter/filter'
@@ -24,7 +22,7 @@ const Character: FC = () => {
     const getCharacter = async () => {
       setLoading(true)
 
-      const favorite = favorites[Number(characterId)] || new ChacacterClass({})
+      const favorite = favorites[Number(characterId)]
 
       const characterInfo = await Application.getCharacter(
         Number(characterId),
@@ -35,16 +33,19 @@ const Character: FC = () => {
         }
       )
 
-      const { id, name, description, img } = favorite
-      const characterToDiaplay = new ChacacterClass({
-        id,
-        name,
-        description,
-        img,
-        comics: characterInfo.comics,
-      })
+      const { id, name, description, img } = favorite || {}
 
-      setCharacter(characterToDiaplay)
+      const characterToDisplay = characterInfo.id
+        ? characterInfo
+        : new ChacacterClass({
+            id,
+            name,
+            description,
+            img,
+            comics: characterInfo.comics,
+          })
+
+      setCharacter(characterToDisplay)
 
       setComics(
         characterInfo.comics.map(({ id, img, name, onSaleDate }) => ({

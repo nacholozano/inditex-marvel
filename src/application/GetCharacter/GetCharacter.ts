@@ -19,12 +19,20 @@ const getCharacter =
       characterService.setCachedCharacterComics(id, characterComics)
     }
 
-    const { name, description, thumbnail } = characters?.results.find(
-      (character) => character.id === id
-    ) || { name: '', description: '', thumbnail: { path: '', extension: '' } }
+    const {
+      id: idValue,
+      name,
+      description,
+      thumbnail,
+    } = characters?.results.find((character) => character.id === id) || {
+      id: null,
+      name: '',
+      description: '',
+      thumbnail: { path: '', extension: '' },
+    }
 
     return new Character({
-      id,
+      id: idValue,
       name,
       description,
       img: `${thumbnail.path}.${thumbnail.extension}`,
