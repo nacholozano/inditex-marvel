@@ -47,7 +47,7 @@ Esto se logra desde https://developer.marvel.com/account en la sección `Your au
 
 `npm run test`
 
-Faltan test pero creo que con hacer unos cuantos es sufiente para este tipo de pruebas.
+Faltan test pero creo que con hacer unos cuantos es suficiente para este tipo de pruebas.
 
 ## Servir build de producción
 
