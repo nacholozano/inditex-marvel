@@ -36,6 +36,9 @@ Node: `v20.13.1`
 Añadir un archivo `.env` en la raíz del proyecto con el campo `VITE_MARVEL_API_KEY=` con la api key
 (Lo correcto sería un .env para cada entorno)
 
+Además, la api key debe estar configurada para que se puedan hacer peticiones desde localhost.  
+Esto se logra desde https://developer.marvel.com/account en la sección `Your authorized referrers`.
+
 ## Desarrollo
 
 `npm run dev`
