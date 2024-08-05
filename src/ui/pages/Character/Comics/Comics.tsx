@@ -9,12 +9,16 @@ const Comics: FC<Props> = ({ list }) => {
       {list.length ? (
         <ul className={styles.list}>
           {list.map(({ id, img, name, desc }) => (
-            <li className={styles.item} key={id}>
+            <li className={styles.item} key={id} data-testid="comic">
               <div className={styles.imgContainer}>
                 <img src={img} className={styles.img} alt={name} />
               </div>
-              <div className={styles.name}>{name}</div>
-              <div className={styles.desc}>{desc}</div>
+              <div className={styles.name} data-testid="comic-name">
+                {name}
+              </div>
+              <div className={styles.desc} data-testid="comic-desc">
+                {desc}
+              </div>
             </li>
           ))}
         </ul>

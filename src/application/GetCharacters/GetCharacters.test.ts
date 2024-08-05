@@ -1,13 +1,10 @@
-import { CharacterService } from '../../infra/Characters/Characters.sevice'
-import { HttpClient } from '../../infra/httpClient'
-import { Character } from '../../domain/Character/Character'
-import getCharactersList from '../../application/GetCharacters/GetCharacters'
-import {
-  GetCharactersFilter,
-  RawCharactersList,
-} from '../../infra/Characters/types'
+import { CharacterService } from 'infra/Characters/Characters.sevice'
+import { HttpClient } from 'infra/httpClient'
+import { Character } from 'domain/Character/Character'
+import getCharactersList from 'application/GetCharacters/GetCharacters'
+import { GetCharactersFilter, RawCharactersList } from 'infra/Characters/types'
 
-jest.mock('../../config/config')
+jest.mock('config/config')
 
 describe('GetCharacters', () => {
   let charactersService: CharacterService

@@ -1,7 +1,7 @@
 import { HttpClient } from 'infra/httpClient'
 import { CharacterService } from './Characters.sevice'
 
-jest.mock('../../config/config')
+jest.mock('config/config')
 
 describe('Characters service', () => {
   let httpClient: HttpClient

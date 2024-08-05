@@ -24,14 +24,18 @@ const Header: FC<Props> = ({
             </div>
             <div className={styles.infoContainer}>
               <div className={styles.title}>
-                <h1 className={styles.name}>{name}</h1>
+                <h1 className={styles.name} data-testid="name">
+                  {name}
+                </h1>
                 <ToggleFav
                   size={24}
                   isFavorite={isFavorite}
                   onClick={onToggleCharacter}
                 />
               </div>
-              <p className={styles.desc}>{desc}</p>
+              <p className={styles.desc} data-testid="desc">
+                {desc}
+              </p>
             </div>
           </div>
         </div>
